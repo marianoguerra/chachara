@@ -2,4 +2,5 @@ chachara/bin
 chachara/lib
 chachara/include
 chachara/local
+chachara/settings.py
 *.pyc
