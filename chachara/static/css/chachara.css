@@ -1,0 +1,56 @@
+#msg-input-box{
+ width: 98%;
+ margin-top: 2em;
+ padding: 1%;
+}
+
+#msg-input, #msgs{
+ width: 60%;
+ margin-left: 20%;
+}
+
+#msg-input{
+ padding: 0.5em;
+ font-size: 1.5em;
+}
+
+.buttons{
+ margin-top: 1em;
+ width: 100%;
+ display-table;
+ text-align: right;
+}
+
+#msg-input-send{
+ margin-right: 20%;
+}
+
+.msg{
+ width: 98%;
+ padding: 1%;
+ display: table;
+ border: 1px solid #e5e5e5;
+ border-top: none;
+ border-left: none;
+ margin-bottom: 1em;
+}
+
+.msg .header, .msg .body, .msg .footer{
+ width: 100%;
+ display: table;
+}
+
+.msg .footer, .msg .header{
+ color: #666;
+ font-size: 0.8em;
+}
+
+.msg .body{
+ font-size: 1.2em;
+ margin-left: 1%;
+ width: 99%;
+}
+
+.msg .footer{
+ text-align: right;
+}
