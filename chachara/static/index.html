@@ -18,18 +18,28 @@
 
  <body>
     <div class="container">
-     <div id="msg-input-box">
+     <div id="msg-input-box" style="display: none">
       <textarea cols=80 rows=3 id="msg-input" autofocus maxlength=140 placeholder="What are you thinking?"></textarea> 
 
       <div class="buttons">
        <button id="msg-input-send" class="btn btn-primary btn-action">Send</button>
       </div>
      </div>
+     
+     <div id="login-box" class="well form-inline">
+      <input type="text" class="input-small" placeholder="Username" id="username">
+      <input type="password" class="input-small" placeholder="Password" id="password">
+      <label class="checkbox">
+      <input type="checkbox"> Remember me
+      </label>
+      <button type="submit" class="btn" id="login-send">Sign in</button>
+     </div>
 
-     <div id="msgs" class="empty">
-      <div class="alert alert-info">
-       empty :(
-      </div>
+     <div id="session-box" style="display: none">
+      <a href="#" id="logout-send">logout</a>
+     </div>
+
+     <div id="msgs">
      </div>
 
     </div>

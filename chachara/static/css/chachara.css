@@ -4,6 +4,20 @@
  padding: 1%;
 }
 
+#login-box{
+ margin-top: 2em;
+ padding: 1%;
+ width: 58%;
+ margin-left: 20%;
+ text-align: center;
+}
+
+#session-box{
+ position: absolute;
+ top: 1em;
+ right: 1em;
+}
+
 #msg-input, #msgs{
  width: 60%;
  margin-left: 20%;
