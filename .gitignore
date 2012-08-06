@@ -6,6 +6,7 @@ chachara/settings.py
 *.pyc
 *.egg-info
 
+chachara/feedformatter.py
 chachara/feedparser.py
 chachara/flask/
 chachara/flask_negotiate.py
