@@ -25,7 +25,7 @@ install dependencies::
 
 create a settings module, base on this one, change the things between <>::
 
-.. code:: python
+::
 
         import os
 
