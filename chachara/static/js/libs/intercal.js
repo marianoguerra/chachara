@@ -1,4 +1,4 @@
-/*global define*/
+/*global window location define*/
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -378,6 +378,15 @@
 
         if (options.contentType) {
             opts.contentType = options.contentType;
+        }
+
+        if (options.accepts) {
+            opts.accepts = options.accepts;
+        }
+
+        if (options.dataType) {
+            opts.dataType = options.dataType;
+
         }
 
         opts.type = method || "GET";

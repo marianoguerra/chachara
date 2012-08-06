@@ -4,3 +4,13 @@ chachara/include
 chachara/local
 chachara/settings.py
 *.pyc
+*.egg-info
+
+chachara/feedparser.py
+chachara/flask/
+chachara/flask_negotiate.py
+chachara/index.yaml
+chachara/jinja2/
+chachara/pubsubhubbub_publish.py
+chachara/werkzeug/
+

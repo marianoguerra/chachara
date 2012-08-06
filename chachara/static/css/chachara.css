@@ -4,7 +4,7 @@
  padding: 1%;
 }
 
-#login-box{
+#login-box, #subscription-box{
  margin-top: 2em;
  padding: 1%;
  width: 58%;
@@ -18,9 +18,13 @@
  right: 1em;
 }
 
-#msg-input, #msgs{
+#msg-input, #msgs, #single-msg{
  width: 60%;
  margin-left: 20%;
+}
+
+#single-msg{
+ margin-top: 10%;
 }
 
 #msg-input{
@@ -67,4 +71,8 @@
 
 .msg .footer{
  text-align: right;
+}
+
+.simple-page-msgs{
+ margin-top: 5%;
 }

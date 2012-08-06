@@ -25,18 +25,26 @@
        <button id="msg-input-send" class="btn btn-primary btn-action">Send</button>
       </div>
      </div>
+
+     <div id="subscription-box" style="display: none">
+      <label for="subscription">Topic</label>
+      <input type="text" id="subscription" placeholder="subscription topic URL">
+
+      <div class="buttons">
+       <button id="subscription-send" class="btn btn-primary
+        btn-action">Subscribe</button>
+      </div>
+     </div>
      
      <div id="login-box" class="well form-inline">
       <input type="text" class="input-small" placeholder="Username" id="username">
       <input type="password" class="input-small" placeholder="Password" id="password">
-      <label class="checkbox">
-      <input type="checkbox"> Remember me
-      </label>
       <button type="submit" class="btn" id="login-send">Sign in</button>
      </div>
 
      <div id="session-box" style="display: none">
       <a href="#" id="logout-send">logout</a>
+      <a href="#" id="show-subscription">follow</a>
      </div>
 
      <div id="msgs">

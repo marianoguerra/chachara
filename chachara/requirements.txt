@@ -1,0 +1,5 @@
+flask
+Flask-Negotiate
+feedformatter
+feedparser
+PubSubHubbub_Publisher
