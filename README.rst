@@ -23,9 +23,9 @@ install dependencies::
 
         pip install --ignore-installed -t . -r requirements.txt
 
-create a settings module, base on this one, change the things between <>::
+create a settings module, base on this one, change the things between <>:
 
-::
+.. code:: Python
 
         import os
 
