@@ -28,6 +28,7 @@ require(["jquery", "json", "dustjs", "intercal", "app", "text!../tpls/msg.html"]
             $msgs,
             $msgInput,
             $msgBox,
+            $msgSend,
             $loginBox,
             $sessionBox,
             $subscription,
@@ -128,7 +129,19 @@ require(["jquery", "json", "dustjs", "intercal", "app", "text!../tpls/msg.html"]
             addMessageToContainer(msg, $msgs);
         }
 
+        function disableMsgInput() {
+            $msgInput.attr({disabled: "disabled"});
+            $msgSend.attr({disabled: "disabled"});
+        }
+
+        function enableMsgInput() {
+            $msgInput.removeAttr("disabled");
+            $msgSend.removeAttr("disabled");
+        }
+
         app.on.resource.msg.create.add(function (ok, response) {
+            enableMsgInput();
+
             if (ok) {
                 addMessage(response);
                 $msgInput
@@ -142,6 +155,7 @@ require(["jquery", "json", "dustjs", "intercal", "app", "text!../tpls/msg.html"]
         app.on.msg.send.add(function () {
             var text = $msgInput.val();
             app.resource.msg.create({username: user, msg: text});
+            disableMsgInput();
         });
 
         app.on.subscription.send.add(function () {
@@ -267,6 +281,7 @@ require(["jquery", "json", "dustjs", "intercal", "app", "text!../tpls/msg.html"]
                     app.resource.msgs.get({user: itemId});
                 } else {
                     $msgInput = $("#msg-input");
+                    $msgSend = $("#msg-input-send");
                     $msgBox = $("#msg-input-box");
                     clearMessages();
                     $loginBox = $("#login-box");
@@ -277,7 +292,7 @@ require(["jquery", "json", "dustjs", "intercal", "app", "text!../tpls/msg.html"]
 
                     $("#subscription-send").click(app.on.subscription.send.fire);
 
-                    $("#msg-input-send").click(app.on.msg.send.fire);
+                    $msgSend.click(app.on.msg.send.fire);
                     $("#login-send").click(app.on.login.send.fire);
                     $("#logout-send").click(function (event) {
                         app.on.logout.send.fire();
