@@ -1,4 +1,5 @@
 '''HTTP API for chachara app'''
+import re
 import time
 import json
 import hmac
@@ -282,7 +283,9 @@ def create_user():
     username = msgdct['username']
     password = msgdct['password']
 
-    if model.User.get_users_count(settings.MAX_USERS) >= settings.MAX_USERS:
+    if re.match("^[a-z]{3,12}$", username) is None:
+        return status_response(400, ok=False, reason="invalid username")
+    elif model.User.get_users_count(settings.MAX_USERS) >= settings.MAX_USERS:
         return status_response(400, ok=False, reason="max users reached")
     elif model.User.get_by_username(username) is not None:
         return status_response(400, ok=False, reason="user already exists")
