@@ -58,7 +58,7 @@ class User(Base):
         """
         return user instance that matches the given username
         """
-        return cls.all().filter('owner =', username).get()
+        return cls.all().filter('username =', username).get()
 
     @classmethod
     def get_by_username_and_password(cls, username, password):
